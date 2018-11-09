@@ -29,5 +29,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  }
 }
