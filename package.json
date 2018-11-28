@@ -1,21 +1,22 @@
 {
-  "name": "front-end",
+  "name": "gulp-start",
   "version": "1.0.0",
-  "description": "Front-end start environment",
+  "description": "Starter pack for front-end development with gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "gulp watch",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pharmasolin/front-end.git"
+    "url": "git+https://github.com/Pharmasolin/gulp-start.git"
   },
   "author": "Denis Lysenko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Pharmasolin/front-end/issues"
+    "url": "https://github.com/Pharmasolin/gulp-start/issues"
   },
-  "homepage": "https://github.com/Pharmasolin/front-end#readme",
+  "homepage": "https://github.com/Pharmasolin/gulp-start/#readme",
   "devDependencies": {
     "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.5",
