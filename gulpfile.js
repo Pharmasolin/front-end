@@ -15,7 +15,7 @@ gulp.task(
 	'watch',
 	['copy-html', 'copy-images', 'styles', 'scripts', 'imagemin'],
 	function() {
-		gulp.watch('src/sass/**/*.scss', ['styles']).on('change', browserSync.reload);;
+		gulp.watch('src/sass/**/*.scss', ['styles']).on('change', browserSync.reload);
 		gulp.watch('src/*.html', ['copy-html']);
 		gulp.watch('src/img/**', ['imagemin'] );
 		gulp.watch('src/js/**', ['scripts-dist'] ).on('change', browserSync.reload);
