@@ -15,10 +15,11 @@ gulp.task(
 	'watch',
 	['copy-html', 'copy-images', 'styles', 'scripts', 'imagemin'],
 	function() {
-		gulp.watch('src/sass/**/*.scss', ['styles']);
-		gulp.watch('src/index.html', ['copy-html']);
-    gulp.watch('src/img/**', ['imagemin'] );
-		gulp.watch('./dist/index.html').on('change', browserSync.reload);
+		gulp.watch('src/sass/**/*.scss', ['styles']).on('change', browserSync.reload);;
+		gulp.watch('src/*.html', ['copy-html']);
+		gulp.watch('src/img/**', ['imagemin'] );
+		gulp.watch('src/js/**', ['scripts-dist'] ).on('change', browserSync.reload);
+		gulp.watch('./dist/*.html').on('change', browserSync.reload);
 
 		browserSync.init({
 			server: './dist'
@@ -60,7 +61,7 @@ gulp.task('scripts-dist', () =>
 );
 
 gulp.task('copy-html', function() {
-	gulp.src('src/index.html').pipe(gulp.dest('./dist'));
+	gulp.src('src/*.html').pipe(gulp.dest('./dist'));
 });
 
 gulp.task('copy-images', function() {
