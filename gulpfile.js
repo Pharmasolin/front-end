@@ -32,7 +32,7 @@ gulp.task('dist', [
 	'copy-images',
 	'styles',
 	'scripts-dist',
-  'imagemin'
+  	'imagemin'
 ]);
 
 gulp.task('scripts', function() {
@@ -79,7 +79,7 @@ gulp.task('styles', function() {
 		)
 		.pipe(
 			autoprefixer({
-				browsers: ['last 2 versions']
+				browsers: ['last 2 versions', "> 1%", "IE 11"]
 			})
 		)
     .pipe(sourcemaps.write('.'))
